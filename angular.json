@@ -25,9 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "./node_module/bootstrap/dist/css/bootstrap.min.css",
-              "./node_module/font-awesome/css/font-awesome.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -89,12 +87,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_module/bootstrap/dist/css/bootstrap.min.css",
+              "./node_module/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "5e7fe707-b0f2-4715-b4d6-6a12544ce526"
   }
 }
