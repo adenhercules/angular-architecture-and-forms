@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {AutenticacaoService} from "../../autenticacao/autenticacao.service";
 
 @Component({
   selector: 'app-login',
@@ -6,17 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  usuario='';
-  senha='';
+  usuario = '';
+  senha = '';
 
-  constructor() {
+  constructor(private autenticacaoService: AutenticacaoService) {
+
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
-  login(){
-    console.log(this.usuario)
-    console.log(this.senha)
+  login() {
+    this.autenticacaoService.autenticar(this.usuario, this.senha).subscribe(()=>{
+      console.log('Autenticado com sucesso');
+    }, (error) =>{
+      alert("Usuário ou senha inválido")
+      console.log(error)
+    })
+
   }
 }
 
