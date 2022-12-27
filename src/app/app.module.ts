@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import {HomeModule} from "./home/home.module";
 import {HttpClientModule} from "@angular/common/http";
 import {MensagemModule} from "./componentes/mensagem/mensagem.module";
+import {RodapeComponent} from "./componentes/rodape/rodape.component";
+import {CabecalhoComponent} from "./componentes/cabecalho/cabecalho.component";
+import {RodapeModule} from "./componentes/rodape/rodape.module";
+import {CabecalhoModule} from "./componentes/cabecalho/cabecalho.module";
 
 @NgModule({
   declarations: [
@@ -15,7 +19,9 @@ import {MensagemModule} from "./componentes/mensagem/mensagem.module";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MensagemModule
+    MensagemModule,
+    RodapeModule,
+    CabecalhoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
