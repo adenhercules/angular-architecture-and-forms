@@ -24,7 +24,7 @@ export class ComentariosComponent implements OnInit {
 
   ngOnInit(): void {
     this.comentarios$ = this.comentariosService.buscaComentario(this.id);
-    this.formBuilder.group({
+    this.comentarioForm = this.formBuilder.group({
       comentario: ['', Validators.maxLength(300)],
     });
   }
@@ -33,7 +33,8 @@ export class ComentariosComponent implements OnInit {
     const comentario = this.comentarioForm.get('comentario')?.value ?? '';
     this.comentarios$ = this.comentariosService
       .incluiComentario(this.id, comentario)
-      .pipe(switchMap(()=>this.comentariosService.buscaComentario(this.id)),
+      .pipe(
+        switchMap(()=>this.comentariosService.buscaComentario(this.id)),
         tap(()=>{
           this.comentarioForm.reset();
           alert('Salvo comentário');
