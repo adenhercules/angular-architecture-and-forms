@@ -1,0 +1,8 @@
+.menu-bar{
+  position: fixed;
+  height: 100%;
+  width: 90%;
+  max-width: 320%;
+  margin: 0;
+  padding: 1em;
+}
