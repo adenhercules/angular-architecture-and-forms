@@ -22,6 +22,6 @@ export class ComentariosService {
   incluiComentario(id: number, commentText: string): Observable<Comentario>{
     return this.http.post<Comentario>(`${API}/photos/${id}/comments`,{
         commentText,
-    })
+    });
   }
 }
