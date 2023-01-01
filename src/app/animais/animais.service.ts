@@ -45,7 +45,7 @@ export class AnimaisService {
   upload(descricao: string, permiteComentario: boolean, arquivo: File) {
     const formData = new FormData();
     formData.append('description', descricao);
-    formData.append('allowComents', permiteComentario ? 'true' : 'false');
+    formData.append('allowComments', permiteComentario ? 'true' : 'false');
     formData.append('imageFile', arquivo);
 
     return this.http.post(`${API}/photos/upload`, formData, {
