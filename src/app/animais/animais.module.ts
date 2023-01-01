@@ -11,6 +11,7 @@ import { ComentariosComponent } from './detalhe-animal/comentarios/comentarios.c
 import {MensagemModule} from "../componentes/mensagem/mensagem.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import {SharedModule} from "../shared/shared.module";
+import { NovoAnimalComponent } from './novo-animal/novo-animal.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import {SharedModule} from "../shared/shared.module";
     GradeFotosAnimaisComponent,
     DetalheAnimalComponent,
     ComentariosComponent,
+    NovoAnimalComponent,
   ],
   imports: [
     CommonModule,
